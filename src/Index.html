@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "Index.css">
+    <title>Sports Predictor projekat</title>
+</head>
+<body>
+    <!--Prvi konteiner-->
+    <button id = "Baton">Kreiraj tim</button>
+    <div id = "Konteiner">
+        <br>
+           <form>
+            <h1>Unesi novi tim</h1>
+               <p>Unesi naziv tima: </p>
+               <input type = "text" id = "nazivTima">
+               <hr>
+               <p>Odaberi ligu u kojoj taj tim igra: </p>
+               <select id = "Liga">
+                   <option value = "Premier">Premier Liga</option>
+                   <option value = "LaLiga">La Liga</option>
+                   <option value = "SerieA">Serie A</option>
+                   <option value = "Bundesliga">Bundesliga</option>
+                   <option value = "Ligue1">Ligue1</option>
+               </select>
+               <hr>
+               <p>Napisi broj poena u toj ligi: </p>
+               <input type = "number" id = "poeni">
+               <p>Napisi broj pobjeda u zadnjih 5 utakmica: </p>
+               <input id = "zadnji5" type = "number">
+               <br>
+               <br>
+               <button type = "button" id = "Dugme" onclick="Kreiraj()">Odaberi</button>
+           </form>     
+    </div>
+    <!--Drugi konteiner-->
+    <div id = "Konteiner1">
+        <p>
+            Bodovi tog tima su: 
+        </p>
+        <span id = "bodovi"></span>
+    </div>
+</div>
+</body>
+<script src = "Index.js"></script>
+</html>
