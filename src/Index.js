@@ -1,3 +1,6 @@
+//Globalni DOM elementi
+var bodovi = document.getElementById('bodovi').innerHTML;
+console.log(bodovi)
 //Funkcionalnost dugmeta 
 var dugme = document.getElementById("Baton");
 var konteiner = document.getElementById("Konteiner");
@@ -18,10 +21,12 @@ class Timovi{
     }
 }
 
+var poeniTima;
+
 function Kreiraj(){
     var nazivTima = document.getElementById('nazivTima').value;
     var ligaTima = document.getElementById("Liga").value;
-    var poeniTima = document.getElementById('poeni').value;
+    poeniTima = document.getElementById('poeni').value;
     var zadnji5Tima = document.getElementById('zadnji5').value;
 
     var Tim = new Timovi(nazivTima, ligaTima, poeniTima, zadnji5Tima);
@@ -31,6 +36,7 @@ function Kreiraj(){
     var BodoviTima = 0;
 
     RacunajBodove(ligaTima, zadnji5Tima);
+    BodoviTima = BodoviTima;
 }
 
 function RacunajBodove(liga, zadnji5){
@@ -75,6 +81,5 @@ function RacunajBodove(liga, zadnji5){
             break;
         }
         console.log(BodoviTima);
-        BodoviTima = document.getElementById('bodovi').innerHTML
 }
 
